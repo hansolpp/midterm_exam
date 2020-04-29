@@ -49,7 +49,8 @@ public class App
    	 			
    	 			JSONObject itemObject = (JSONObject) infoArray.get(i);
    	 			String temp = (String) itemObject.get("item");
-   	 			if(temp.contains(split_string)) {
+   	 			
+   	 			if(re.check(temp, split_string)) {
    	 				System.out.println("item " + i +": " + itemObject.get("item"));
    	 			}
    	 		}
